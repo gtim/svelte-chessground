@@ -4,9 +4,7 @@ A Svelte chessboard component for playing chess, displaying positions and games,
 Svelte-chessground is a wrapper around [Chessground](https://github.com/lichess-org/chessground), the open source chess UI developed for Lichess.
 Take a look at the [live demos](https://gtim.github.io/svelte-chessground-examples/watch-ai).
 
-## Installation
-
-    npm install svelte-chessground
+This is a fresh package with an interface likely to change.
 
 ## Usage
 
@@ -38,3 +36,9 @@ You can find more examples in the [svelte-chessground-examples](https://github.c
 * [watching random AI's play](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/watch-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/watch-ai))
 
 Chessground contains no chess logic, and as such can be used for chess variations. The examples import [chess.js](https://github.com/jhlywa/chess.js) for chess logic. 
+
+
+### Installation
+
+    npm install svelte-chessground
+    
