@@ -35,5 +35,8 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"chessground": "^8.3.7"
+	}
 }
