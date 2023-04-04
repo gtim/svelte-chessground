@@ -7,17 +7,21 @@
 
 	import { onMount } from 'svelte';
 
-	let config = {};
+	/** @type {import('chessground/config').Config} */
+	export let config = {};
+
+	/** @type {import('chessground/api').Api} */
 	let cg;
-	let div;
+
+	/** @type {HTMLDivElement} */
+	let container;
 
 	onMount(async () => {
-		cg = Chessground( div, config );
+		cg = Chessground( container, config );
 	});
 </script>
 
-<div id="chessground" bind:this={div}>
-</div>
+<div id="chessground" bind:this={container}></div>
 
 <style>
 	#chessground {
