@@ -1,7 +1,7 @@
 # Svelte Chessground
 
-A Svelte chessboard component for playing chess, displaying positions and games, and more.
-Svelte-chessground is a wrapper around [Chessground](https://github.com/lichess-org/chessground), the open source chess UI developed for Lichess.
+A Svelte chessboard component.
+Svelte-chessground is a wrapper around the full-featured [Chessground](https://github.com/lichess-org/chessground), the open source chess UI developed for Lichess.
 Take a look at the [live demos](https://gtim.github.io/svelte-chessground-examples/watch-ai).
 
 This is a fresh package with an interface likely to change.
