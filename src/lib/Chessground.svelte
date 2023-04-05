@@ -163,11 +163,11 @@
 
 </script>
 
-<div id="chessground" bind:this={container}></div>
+<div class="scg_container" bind:this={container}></div>
 
 <style>
-	#chessground {
+	.scg_container {
 		width:100%;
-		height:100%;
+		aspect-ratio:1;
 	}
 </style>
