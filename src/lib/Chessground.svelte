@@ -1,5 +1,6 @@
 <script>
 	import { Chessground } from 'chessground';
+	import { initial } from 'chessground/fen.js';
 
 	import './assets/chessground.base.css';
 	import './assets/chessground.brown.css';
@@ -7,8 +8,20 @@
 
 	import { onMount } from 'svelte';
 
+
+
+	/** @type {import('chessground/types').FEN} */
+	export let fen = initial;
+	$: setConfig( { fen: fen } );
+
+	/** @type {import('chessground/types').Color} */
+	export let orientation = 'white';
+	$: setConfig( { orientation: orientation } );
+
 	/** @type {import('chessground/config').Config} */
 	export let config = {};
+
+
 
 	/** @type {HTMLDivElement} */
 	let container;
@@ -17,8 +30,20 @@
 	let chessground;
 
 	onMount(async () => {
+		config.orientation ??= orientation;
+		config.fen ??= fen;
 		chessground = Chessground( container, config );
 	});
+
+	/**
+	 * @param {import('chessground/config').Config} config
+	 * @return void
+	 */
+	function setConfig( config ) {
+		if ( chessground ) {
+			chessground.set( config );
+		}
+	}
 
 	/*
 	 *
