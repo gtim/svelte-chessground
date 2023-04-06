@@ -21,13 +21,13 @@ Chessground is extensively configurable through props. Parameters and descriptio
 
     <script>
         import {Chessground} from 'svelte-chessground';
-        let fen = 'rnb1k1nr/p2p1ppp/3B4/1pbN1N1P/4P1P1/3P1Q2/PqP5/R4KR1 b kq - 1 18'; // Forsyth-Edwards Notation
+        let fen = '7k/5K2/7P/6pP/8/8/8/8 w - - 0 1'; // Forsyth-Edwards Notation
         let orientation = 'black';
     </script>    
 
     <Chessground {fen} {orientation}/>
     
-These props enjoy the usual svelte reactivity magic: changing `orientation` to `white` at any time will flip the board.
+These props enjoy the usual svelte reactivity magic: changing `orientation` or `fen` at any time will change the board.
 You can find more examples in the [svelte-chessground-examples](https://github.com/gtim/svelte-chessground-examples/), including:
 * [allowing only legal moves](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/legal/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/legal))
 * [playing against random AI](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/vs-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/vs-ai))
