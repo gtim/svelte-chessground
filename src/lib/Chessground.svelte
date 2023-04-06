@@ -18,6 +18,7 @@
 	 * All simple-valued Chessground parameters have their own props. The others must be set via the config prop and are:
 	 *     highlight, animation, movable, premovable, predroppable, draggable, selectable, events, drawable
 	 * 
+	 * Dev note: These props would preferrably have been implemented with $$props or a preprocessor, but doing so would lose Typescript compile-time checks.
 	 */
 
 	/** @type {import('chessground/types').FEN | undefined} */
