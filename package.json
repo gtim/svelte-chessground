@@ -2,7 +2,7 @@
 	"name": "svelte-chessground",
 	"description": "Svelte chessboard component. A Svelte wrapper for the full-featured Chessground chess UI.",
 	"keywords": ["chess","svelte","chessground","chessboard"],
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"license": "GPL-3.0",
 	"scripts": {
 		"dev": "vite dev",
