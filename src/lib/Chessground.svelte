@@ -1,6 +1,6 @@
 <script>
 	import { Chessground } from 'chessground';
-	import { initial } from 'chessground/fen.js';
+	import { initial as initialFen } from 'chessground/fen.js';
 
 	import './assets/chessground.base.css';
 	import './assets/chessground.brown.css';
@@ -11,7 +11,7 @@
 
 
 	/** @type {import('chessground/types').FEN} */
-	export let fen = initial;
+	export let fen = initialFen;
 	$: setConfig( { fen: fen } );
 
 	/** @type {import('chessground/types').Color} */
