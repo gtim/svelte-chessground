@@ -30,6 +30,7 @@ Chessground is extensively configurable through props. Parameters and descriptio
 These props enjoy the usual svelte reactivity magic: changing `orientation` or `fen` at any time will change the board.
 You can find more examples in the [svelte-chessground-examples](https://github.com/gtim/svelte-chessground-examples/), including:
 * [allowing only legal moves](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/legal/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/legal))
+* [reactive position and orientation](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/reactive/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/reactive))
 * [playing against random AI](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/vs-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/vs-ai))
 * [watching random AI's play](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/watch-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/watch-ai))
 
