@@ -47,20 +47,20 @@ Chessground can be completely restyled through CSS. The component imports defaul
 
 1. Override specific CSS commands with a scoped `:global`:
 
-    <div class="override_background">
-        <Chessground />
-    </div>
-    <style>
-        div.override_background :global(.cg-wrap cg-board) {
-            background-image:url("/my-board.jpg");
-        }
-    </style>
+        <div class="override_background">
+            <Chessground />
+        </div>
+        <style>
+            div.override_background :global(.cg-wrap cg-board) {
+                background-image:url("/my-board.jpg");
+            }
+        </style>
 
 2. Apply your own full chessground stylesheet instead of the defaults by setting the `className` prop and importing your own stylesheet. By changing the class name from the default, none of the default stylesheets will apply, not even the piece SVGs. To not even import the default stylesheets, you can use the `<ChessgroundUnstyled/>` component, which is identical to `<Chessground/>` except for not importing default stylesheets.
 
-    <script>
-        import '$lib/my-chessboard.css';
-    </script>
-    <Chessground className="my-chessboard" coordinates={false}/>
+        <script>
+            import '$lib/my-chessboard.css';
+        </script>
+        <Chessground className="my-chessboard" coordinates={false}/>
 
 You can find working code for both approaches in the [custom styles examples](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte).
