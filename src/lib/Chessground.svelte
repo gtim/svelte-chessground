@@ -2,9 +2,9 @@
 	import { Chessground } from 'chessground';
 	import { initial as initialFen } from 'chessground/fen.js';
 
-	import './assets/chessground.base.css';
-	import './assets/chessground.brown.css';
-	import './assets/chessground.cburnett.css';
+	import './assets/chessground.base.css';     // Default styling, use ChessgroundUnstyled to substitute your own
+	import './assets/chessground.brown.css';    // Default styling, use ChessgroundUnstyled to substitute your own
+	import './assets/chessground.cburnett.css'; // Default styling, use ChessgroundUnstyled to substitute your own
 
 	import { onMount } from 'svelte';
 
@@ -20,6 +20,9 @@
 	 * 
 	 * Dev note: These props would preferrably have been implemented with $$props or a preprocessor, but doing so would lose Typescript compile-time checks.
 	 */
+
+	/** @type {string} */
+	export let className = 'cg-default-style';
 
 	/** @type {import('chessground/types').FEN | undefined} */
 	export let fen = undefined;
@@ -260,10 +263,10 @@
 
 </script>
 
-<div class="scg_container" bind:this={container}></div>
+<div class="cg-wrap {className}" bind:this={container}></div>
 
 <style>
-	.scg_container {
+	.cg-wrap {
 		width:100%;
 		aspect-ratio:1;
 	}

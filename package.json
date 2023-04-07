@@ -1,14 +1,20 @@
 {
 	"name": "svelte-chessground",
 	"description": "Svelte chessboard component. A Svelte wrapper for the full-featured Chessground chess UI.",
-	"keywords": ["chess","svelte","chessground","chessboard"],
-	"version": "0.0.6",
+	"keywords": [
+		"chess",
+		"svelte",
+		"chessground",
+		"chessboard"
+	],
+	"version": "0.1.0",
 	"license": "GPL-3.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
+		"prepackage": "node ./scripts/generate-ChessgroundUnstyled.js",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
