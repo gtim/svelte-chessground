@@ -62,6 +62,6 @@ Chessground can be completely restyled through CSS. The component imports defaul
         <script>
             import '$lib/my-chessboard.css';
         </script>
-        <Chessground className="my-chessboard" coordinates={false}/>
+        <Chessground className="my-chessboard" />
 
 You can find working code for both approaches in the [custom styles examples](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte).
