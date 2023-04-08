@@ -57,7 +57,7 @@ Chessground can be completely restyled through CSS. The component imports defaul
             }
         </style>
 
-2. Apply your own full chessground stylesheet instead of the defaults by setting the `className` prop and importing your own stylesheet. By changing the class name from the default, none of the default stylesheets will apply, not even the piece SVGs. To not even import the default stylesheets, you can use the `<ChessgroundUnstyled/>` component, which is identical to `<Chessground/>` except for not importing default stylesheets.
+2. Apply your own full chessground stylesheet instead of the defaults by setting the `className` prop and importing your own stylesheet. By changing the class name from the default, none of the default stylesheets will apply, not even the piece SVGs.
 
         <script>
             import '$lib/my-chessboard.css';
