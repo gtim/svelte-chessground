@@ -53,7 +53,7 @@ Chessground can be completely restyled through CSS. The component imports defaul
         </div>
         <style>
             div.override_background :global(.cg-wrap cg-board) {
-                background-image:url("/my-board.jpg");
+                background-image:url("/my-board.jpg"); /* replace chessboard image */
             }
         </style>
 
