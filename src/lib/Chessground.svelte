@@ -2,9 +2,9 @@
 	import { Chessground } from 'chessground';
 	import { initial as initialFen } from 'chessground/fen.js';
 
-	import './assets/chessground.base.css';     // Default styling, use ChessgroundUnstyled to substitute your own
-	import './assets/chessground.brown.css';    // Default styling, use ChessgroundUnstyled to substitute your own
-	import './assets/chessground.cburnett.css'; // Default styling, use ChessgroundUnstyled to substitute your own
+	import './assets/chessground.base.css';
+	import './assets/chessground.brown.css';
+	import './assets/chessground.cburnett.css';
 
 	import { onMount } from 'svelte';
 
