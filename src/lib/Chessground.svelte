@@ -1,6 +1,5 @@
 <script>
 	import { Chessground } from 'chessground';
-	import { initial as initialFen } from 'chessground/fen.js';
 
 	import './assets/chessground.base.css';
 	import './assets/chessground.brown.css';
