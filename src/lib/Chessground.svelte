@@ -111,7 +111,7 @@
 
 	/**
 	 * @param {import('chessground/config').Config} config
-	 * @return void
+	 * @returns {void}
 	 */
 	function setConfig( config ) {
 		if ( chessground ) {
@@ -127,23 +127,23 @@
 
 	/**
 	 * @param {import('chessground/config').Config} config
-	 * @return void
+	 * @returns {void}
 	 */
 	export function set(config) {
 		chessground.set(config);
 	}
 
-	/** @return {import('chessground/state').State} */
+	/** @returns {import('chessground/state').State} */
 	export function getState() {
 		return chessground.state;
 	}
 
-	/** @return {import('chessground/types').FEN} */
+	/** @returns {import('chessground/types').FEN} */
 	export function getFen() {
 		return chessground.getFen();
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function toggleOrientation() {
 		return chessground.toggleOrientation();
 	}
@@ -151,7 +151,7 @@
 	/**
 	 * @param {import('chessground/types').Key} orig
 	 * @param {import('chessground/types').Key} dest
-	 * @return void
+	 * @returns {void}
 	 */
 	export function move( orig, dest ) {
 		return chessground.move( orig, dest );
@@ -159,7 +159,7 @@
 
 	/**
 	 * @param {import('chessground/types').PiecesDiff} pieces
-	 * @return void
+	 * @returns {void}
 	 */
 	export function setPieces( pieces ) {
 		return chessground.setPieces( pieces );
@@ -168,7 +168,7 @@
 	/**
 	 * @param {import('chessground/types').Key | null } key
 	 * @param {boolean} [force]
-	 * @return void
+	 * @returns {void}
 	 */
 	export function selectSquare( key, force ) {
 		return chessground.selectSquare( key, force );
@@ -177,48 +177,48 @@
 	/**
 	 * @param {import('chessground/types').Piece } piece
 	 * @param {import('chessground/types').Key } key
-	 * @return void
+	 * @returns {void}
 	 */
 	export function newPiece( piece, key ) {
 		return chessground.newPiece( piece, key );
 	}
 
-	/** @return boolean */
+	/** @returns {boolean} */
 	export function playPremove() {
 		return chessground.playPremove();
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function cancelPremove() {
 		chessground.cancelPremove();
 	}
 
 	/**
 	 * @param {(drop: import('chessground/types').Drop) => boolean } validate
-	 * @return boolean 
+	 * @returns {boolean}
 	 */
 	export function playPredrop( validate ) {
 		return chessground.playPredrop( validate );
 	}
 	
-	/** @return void */
+	/** @returns {void} */
 	export function cancelPredrop() {
 		chessground.cancelPredrop();
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function cancelMove() {
 		chessground.cancelMove();
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function stop() {
 		chessground.stop();
 	}
 
 	/**
 	 * @param {import('chessground/types').Key[] } keys
-	 * @return void
+	 * @returns {void}
 	 */
 	export function explode( keys ) {
 		chessground.explode( keys );
@@ -226,7 +226,7 @@
 
 	/**
 	 * @param {import('chessground/draw').DrawShape[] } shapes
-	 * @return void
+	 * @returns {void}
 	 */
 	export function setShapes( shapes ) {
 		chessground.setShapes( shapes );
@@ -234,13 +234,13 @@
 
 	/**
 	 * @param {import('chessground/draw').DrawShape[] } shapes
-	 * @return void
+	 * @returns {void}
 	 */
 	export function setAutoShapes( shapes ) {
 		chessground.setAutoShapes( shapes );
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function redrawAll() {
 		return chessground.redrawAll();
 	}
@@ -249,13 +249,13 @@
 	 * @param {import('chessground/types').Piece } piece
 	 * @param {import('chessground/types').MouchEvent } event
 	 * @param {boolean} [force]
-	 * @return void
+	 * @returns {void}
 	 */
 	export function dragNewPiece( piece, event, force ) {
 		chessground.dragNewPiece( piece, event, force );
 	}
 
-	/** @return void */
+	/** @returns {void} */
 	export function destroy() {
 		return chessground.destroy();
 	}
