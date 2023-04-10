@@ -145,24 +145,41 @@
 		chessground.set(config);
 	}
 
-	/** @returns {import('chessground/state').State} */
+	/** 
+	 * Internal Chessground state, described at
+	 *     https://github.com/lichess-org/chessground/blob/master/src/state.ts
+	 *
+	 * @returns {import('chessground/state').State} - Chessground state
+	 */
 	export function getState() {
 		return chessground.state;
 	}
 
-	/** @returns {import('chessground/types').FEN} */
+	/** 
+	 * Current position as a FEN string. Contains only pieces, no flags.
+	 *     e.g. "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
+	 *
+	 * @returns {import('chessground/types').FEN} - FEN string
+	 */
 	export function getFen() {
 		return chessground.getFen();
 	}
 
-	/** @returns {void} */
+	/** 
+	 * Toggle chessboard orientation between white and black. Can also be
+	 *     handled via the orientation prop.
+	 *
+	 * @returns {void}
+	 */
 	export function toggleOrientation() {
 		return chessground.toggleOrientation();
 	}
 
 	/**
-	 * @param {import('chessground/types').Key} orig
-	 * @param {import('chessground/types').Key} dest
+	 * Perform a move programmatically.
+	 *
+	 * @param {import('chessground/types').Key} orig - Origin square.
+	 * @param {import('chessground/types').Key} dest - Destination square.
 	 * @returns {void}
 	 */
 	export function move( orig, dest ) {
