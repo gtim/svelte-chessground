@@ -75,7 +75,15 @@
 	export let blockTouchScroll = undefined;
 	$: setConfig( { blockTouchScroll: blockTouchScroll } );
 
-	/** @type {import('chessground/config').Config} */
+	/**
+	 * Chessground configuration. The config prop can be used to set any 
+	 *     config keys, and is needed to set config keys that lack own
+	 *     props: highlight, animation, movable, premovable, predroppable,
+	 *     draggable, selectable, events and drawable.
+	 *     https://github.com/lichess-org/chessground/blob/master/src/api.ts
+	 *
+	 * @type {import('chessground/config').Config}
+	 */
 	export let config = {};
 	$: setConfig( config );
 
@@ -110,7 +118,9 @@
 	});
 
 	/**
-	 * @param {import('chessground/config').Config} config
+	 * Set config values if component is mounted. Used for reactive props.
+	 *
+	 * @param {import('chessground/config').Config} config - object of key(s) and value(s) to set.
 	 * @returns {void}
 	 */
 	function setConfig( config ) {
@@ -126,7 +136,9 @@
 	 */
 
 	/**
-	 * @param {import('chessground/config').Config} config
+	 * Set config values. Alternative to using the config prop.
+	 *
+	 * @param {import('chessground/config').Config} config - object of key(s) and value(s) to set.
 	 * @returns {void}
 	 */
 	export function set(config) {
