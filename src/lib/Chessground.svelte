@@ -20,58 +20,116 @@
 	 * Dev note: These props would preferrably have been implemented with $$props or a preprocessor, but doing so would lose Typescript compile-time checks.
 	 */
 
-	/** @type {string} */
+	/**
+	 * CSS class name applied to wrapping div. Set this to apply another
+	 *     stylesheet than the default.
+	 *
+	 * @type {string}
+	 */
 	export let className = 'cg-default-style';
 
-	/** @type {import('chessground/types').FEN | undefined} */
+	/** 
+	 * Chess position in Forsyth-Edwards notation.
+	 * 
+	 * @type {import('chessground/types').FEN | undefined}
+	 */
 	export let fen = undefined;
 	$: setConfig( { fen: fen } );
 
-	/** @type {import('chessground/types').Color | undefined} */
+	/**
+	 * Board orientation: white or black.
+	 *
+	 * @type {import('chessground/types').Color | undefined}
+	 */
 	export let orientation = undefined;
 	$: setConfig( { orientation: orientation } );
 
-	/** @type {import('chessground/types').Color | undefined} */
+	/**
+	 * Side to play: white or black.
+	 *
+	 * @type {import('chessground/types').Color | undefined}
+	 */
 	export let turnColor = undefined;
 	$: setConfig( { turnColor: turnColor } );
 
-	/** @type {import('chessground/types').Color | boolean | undefined} */
+	/**
+	 * Color in check, for highlighting the square. True for the current
+	 *     color, or false to unset.
+	 *
+	 * @type {import('chessground/types').Color | boolean | undefined}
+	 */
 	export let check = undefined;
 	$: setConfig( { check: check } );
 
-	/** @type {import('chessground/types').Key[] | undefined} */
+	/**
+	 * Squares of the last move, for highlighting.
+	 *
+	 * @type {import('chessground/types').Key[] | undefined}
+	 */
 	export let lastMove = undefined;
 	$: setConfig( { lastMove: lastMove } );
 
-	/** @type {import('chessground/types').Key | undefined} */
+	/**
+	 * Square currently selected.
+	 *
+	 * @type {import('chessground/types').Key | undefined}
+	 */
 	export let selected = undefined;
 	$: setConfig( { selected: selected } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Draw board coordinates (a-h, 1-8).
+	 *
+	 * @type {boolean | undefined}
+	 */
 	export let coordinates = undefined;
 	$: setConfig( { coordinates: coordinates } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Immediately complete castling by moving the rook after the king move.
+	 *
+	 * @type {boolean | undefined}
+	 */
 	export let autoCastle = undefined;
 	$: setConfig( { autoCastle: autoCastle } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Don't bind events: the user will never be able to move pieces around.
+	 * 
+	 * @type {boolean | undefined}
+	 */
 	export let viewOnly = undefined;
 	$: setConfig( { viewOnly: viewOnly } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Disable the right-click context menu.
+	 *
+	 * @type {boolean | undefined}
+	 */
 	export let disableContextMenu = undefined;
 	$: setConfig( { disableContextMenu: disableContextMenu } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Add z-index to pieces (for 3D).
+	 *
+	 * @type {boolean | undefined}
+	 */
 	export let addPieceZIndex = undefined;
 	$: setConfig( { addPieceZIndex: addPieceZIndex } );
 
-	/** @type {HTMLElement | undefined} */
+	/**
+	 * Add --cg-width and --cg-height CSS vars containing the board's dimensions to this element.
+	 *
+	 * @type {HTMLElement | undefined}
+	 */
 	export let addDimensionsCssVarsTo = undefined;
 	$: setConfig( { addDimensionsCssVarsTo: addDimensionsCssVarsTo } );
 
-	/** @type {boolean | undefined} */
+	/**
+	 * Block scrolling via touch dragging on the board, e.g. for coordinate training
+	 *
+	 * @type {boolean | undefined}
+	 */
 	export let blockTouchScroll = undefined;
 	$: setConfig( { blockTouchScroll: blockTouchScroll } );
 
