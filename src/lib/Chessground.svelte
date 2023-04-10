@@ -187,7 +187,9 @@
 	}
 
 	/**
-	 * @param {import('chessground/types').PiecesDiff} pieces
+	 * Add and/or remove arbitrary pieces on the board.
+	 * 
+	 * @param {import('chessground/types').PiecesDiff} pieces - Pieces to add/remove.
 	 * @returns {void}
 	 */
 	export function setPieces( pieces ) {
@@ -195,8 +197,10 @@
 	}
 
 	/**
-	 * @param {import('chessground/types').Key | null } key
-	 * @param {boolean} [force]
+	 * Click a square programmatically. 
+	 *
+	 * @param {import('chessground/types').Key | null } key - Square to click.
+	 * @param {boolean} [force] - Click even if the squares are not selectable (config.selectable).
 	 * @returns {void}
 	 */
 	export function selectSquare( key, force ) {
@@ -204,49 +208,75 @@
 	}
 
 	/**
-	 * @param {import('chessground/types').Piece } piece
-	 * @param {import('chessground/types').Key } key
+	 * Put a new piece on the board.
+	 * 
+	 * @param {import('chessground/types').Piece } piece - Piece to place.
+	 * @param {import('chessground/types').Key } key - Square to place the piece.
 	 * @returns {void}
 	 */
 	export function newPiece( piece, key ) {
 		return chessground.newPiece( piece, key );
 	}
 
-	/** @returns {boolean} */
+	/**
+	 * Play the current premove, if any.
+	 * 
+	 * @returns {boolean} - True if a premove was played.
+	 */
 	export function playPremove() {
 		return chessground.playPremove();
 	}
 
-	/** @returns {void} */
+	/**
+	 * Cancel the current premove, if any.
+	 * 
+	 * @returns {void}
+	 */
 	export function cancelPremove() {
 		chessground.cancelPremove();
 	}
 
 	/**
-	 * @param {(drop: import('chessground/types').Drop) => boolean } validate
-	 * @returns {boolean}
+	 * Play the current predrop, if any.
+	 *
+	 * @param {(drop: import('chessground/types').Drop) => boolean } validate - Predicate to decide whether a drop is valid.
+	 * @returns {boolean} - True if a predrop was played.
 	 */
 	export function playPredrop( validate ) {
 		return chessground.playPredrop( validate );
 	}
 	
-	/** @returns {void} */
+	/**
+	 * Cancel the current predrop, if any.
+	 * 
+	 * @returns {void}
+	 */
 	export function cancelPredrop() {
 		chessground.cancelPredrop();
 	}
 
-	/** @returns {void} */
+	/**
+	 * Cancel the current move being made.
+	 *
+	 * @returns {void}
+	 */
 	export function cancelMove() {
 		chessground.cancelMove();
 	}
 
-	/** @returns {void} */
+	/**
+	 * Cancel the current move and prevent further ones.
+	 * 
+	 * @returns {void}
+	 */
 	export function stop() {
 		chessground.stop();
 	}
 
 	/**
-	 * @param {import('chessground/types').Key[] } keys
+	 * Make squares explode (for atomic chess).
+	 * 
+	 * @param {import('chessground/types').Key[] } keys - Squares to explode.
 	 * @returns {void}
 	 */
 	export function explode( keys ) {
@@ -254,7 +284,9 @@
 	}
 
 	/**
-	 * @param {import('chessground/draw').DrawShape[] } shapes
+	 * Programmatically draw user shapes.
+	 *
+	 * @param {import('chessground/draw').DrawShape[] } shapes - Shapes to draw.
 	 * @returns {void}
 	 */
 	export function setShapes( shapes ) {
@@ -262,22 +294,30 @@
 	}
 
 	/**
-	 * @param {import('chessground/draw').DrawShape[] } shapes
+	 * Programmatically draw auto shapes.
+	 * 
+	 * @param {import('chessground/draw').DrawShape[] } shapes - Shapes to draw.
 	 * @returns {void}
 	 */
 	export function setAutoShapes( shapes ) {
 		chessground.setAutoShapes( shapes );
 	}
 
-	/** @returns {void} */
+	/** 
+	 * Redraw. Only useful when CSS changes the board width/height ratio (for 3D).
+	 *
+	 * @returns {void}
+	 */
 	export function redrawAll() {
 		return chessground.redrawAll();
 	}
 
 	/**
-	 * @param {import('chessground/types').Piece } piece
-	 * @param {import('chessground/types').MouchEvent } event
-	 * @param {boolean} [force]
+	 * Drag new piece, for crazyhouse and board editors.
+	 *
+	 * @param {import('chessground/types').Piece } piece - Piece to drop
+	 * @param {import('chessground/types').MouchEvent } event - The mouse/touch event identifying a target.
+	 * @param {boolean} [force] - True if the new piece can replace an existing one.
 	 * @returns {void}
 	 */
 	export function dragNewPiece( piece, event, force ) {
