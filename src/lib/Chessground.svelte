@@ -362,7 +362,7 @@
 	}
 
 	/** 
-	 * Redraw. Only useful when CSS changes the board width/height ratio (for 3D).
+	 * Redraw. Useful when CSS changes the board width or height.
 	 *
 	 * @returns {void}
 	 */
