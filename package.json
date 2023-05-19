@@ -7,7 +7,7 @@
 		"chessground",
 		"chessboard"
 	],
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"license": "GPL-3.0",
 	"homepage": "https://github.com/gtim/svelte-chessground#readme",
 	"bugs": "https://github.com/gtim/svelte-chessground/issues",
