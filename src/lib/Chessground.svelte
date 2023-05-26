@@ -22,15 +22,13 @@
 
 	/**
 	 * CSS class name applied to wrapping div. Set this to apply another
-	 *     stylesheet than the default.
-	 *
+	 * stylesheet than the default.
 	 * @type {string}
 	 */
 	export let className = 'cg-default-style';
 
 	/** 
 	 * Chess position in Forsyth-Edwards notation.
-	 * 
 	 * @type {import('chessground/types').FEN | undefined}
 	 */
 	export let fen = undefined;
@@ -38,7 +36,6 @@
 
 	/**
 	 * Board orientation: white or black.
-	 *
 	 * @type {import('chessground/types').Color | undefined}
 	 */
 	export let orientation = undefined;
@@ -46,7 +43,6 @@
 
 	/**
 	 * Side to play: white or black.
-	 *
 	 * @type {import('chessground/types').Color | undefined}
 	 */
 	export let turnColor = undefined;
@@ -54,8 +50,7 @@
 
 	/**
 	 * Color in check, for highlighting the square. True for the current
-	 *     color, or false to unset.
-	 *
+	 * color, or false to unset.
 	 * @type {import('chessground/types').Color | boolean | undefined}
 	 */
 	export let check = undefined;
@@ -63,7 +58,6 @@
 
 	/**
 	 * Squares of the last move, for highlighting.
-	 *
 	 * @type {import('chessground/types').Key[] | undefined}
 	 */
 	export let lastMove = undefined;
@@ -71,7 +65,6 @@
 
 	/**
 	 * Square currently selected.
-	 *
 	 * @type {import('chessground/types').Key | undefined}
 	 */
 	export let selected = undefined;
@@ -79,7 +72,6 @@
 
 	/**
 	 * Draw board coordinates (a-h, 1-8).
-	 *
 	 * @type {boolean | undefined}
 	 */
 	export let coordinates = undefined;
@@ -87,7 +79,6 @@
 
 	/**
 	 * Immediately complete castling by moving the rook after the king move.
-	 *
 	 * @type {boolean | undefined}
 	 */
 	export let autoCastle = undefined;
@@ -95,7 +86,6 @@
 
 	/**
 	 * Don't bind events: the user will never be able to move pieces around.
-	 * 
 	 * @type {boolean | undefined}
 	 */
 	export let viewOnly = undefined;
@@ -103,7 +93,6 @@
 
 	/**
 	 * Disable the right-click context menu.
-	 *
 	 * @type {boolean | undefined}
 	 */
 	export let disableContextMenu = undefined;
@@ -111,7 +100,6 @@
 
 	/**
 	 * Add z-index to pieces (for 3D).
-	 *
 	 * @type {boolean | undefined}
 	 */
 	export let addPieceZIndex = undefined;
@@ -119,7 +107,6 @@
 
 	/**
 	 * Add --cg-width and --cg-height CSS vars containing the board's dimensions to this element.
-	 *
 	 * @type {HTMLElement | undefined}
 	 */
 	export let addDimensionsCssVarsTo = undefined;
@@ -127,7 +114,6 @@
 
 	/**
 	 * Block scrolling via touch dragging on the board, e.g. for coordinate training
-	 *
 	 * @type {boolean | undefined}
 	 */
 	export let blockTouchScroll = undefined;
@@ -135,11 +121,10 @@
 
 	/**
 	 * Chessground configuration. The config prop can be used to set any 
-	 *     config keys, and is needed to set config keys that lack own
-	 *     props: highlight, animation, movable, premovable, predroppable,
-	 *     draggable, selectable, events and drawable.
-	 *     https://github.com/lichess-org/chessground/blob/master/src/api.ts
-	 *
+	 * config keys, and is needed to set config keys that lack own
+	 * props: highlight, animation, movable, premovable, predroppable,
+	 * draggable, selectable, events and drawable.
+	 * https://github.com/lichess-org/chessground/blob/master/src/api.ts
 	 * @type {import('chessground/config').Config}
 	 */
 	export let config = {};
@@ -177,7 +162,6 @@
 
 	/**
 	 * Set config values if component is mounted. Used for reactive props.
-	 *
 	 * @param {import('chessground/config').Config} config - object of key(s) and value(s) to set.
 	 * @returns {void}
 	 */
@@ -195,7 +179,6 @@
 
 	/**
 	 * Set config values. Alternative to using the config prop.
-	 *
 	 * @param {import('chessground/config').Config} config - object of key(s) and value(s) to set.
 	 * @returns {void}
 	 */
@@ -205,8 +188,7 @@
 
 	/** 
 	 * Internal Chessground state, described at
-	 *     https://github.com/lichess-org/chessground/blob/master/src/state.ts
-	 *
+	 * https://github.com/lichess-org/chessground/blob/master/src/state.ts
 	 * @returns {import('chessground/state').State} - Chessground state
 	 */
 	export function getState() {
@@ -215,8 +197,7 @@
 
 	/** 
 	 * Current position as a FEN string. Contains only pieces, no flags.
-	 *     e.g. "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
-	 *
+	 * e.g. "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
 	 * @returns {import('chessground/types').FEN} - FEN string
 	 */
 	export function getFen() {
@@ -225,8 +206,7 @@
 
 	/** 
 	 * Toggle chessboard orientation between white and black. Can also be
-	 *     handled via the orientation prop.
-	 *
+	 * handled via the orientation prop.
 	 * @returns {void}
 	 */
 	export function toggleOrientation() {
@@ -235,7 +215,6 @@
 
 	/**
 	 * Perform a move programmatically.
-	 *
 	 * @param {import('chessground/types').Key} orig - Origin square.
 	 * @param {import('chessground/types').Key} dest - Destination square.
 	 * @returns {void}
@@ -246,7 +225,6 @@
 
 	/**
 	 * Add and/or remove arbitrary pieces on the board.
-	 * 
 	 * @param {import('chessground/types').PiecesDiff} pieces - Pieces to add/remove.
 	 * @returns {void}
 	 */
@@ -256,7 +234,6 @@
 
 	/**
 	 * Click a square programmatically. 
-	 *
 	 * @param {import('chessground/types').Key | null } key - Square to click.
 	 * @param {boolean} [force] - Click even if the squares are not selectable (config.selectable).
 	 * @returns {void}
@@ -267,7 +244,6 @@
 
 	/**
 	 * Put a new piece on the board.
-	 * 
 	 * @param {import('chessground/types').Piece } piece - Piece to place.
 	 * @param {import('chessground/types').Key } key - Square to place the piece.
 	 * @returns {void}
@@ -278,7 +254,6 @@
 
 	/**
 	 * Play the current premove, if any.
-	 * 
 	 * @returns {boolean} - True if a premove was played.
 	 */
 	export function playPremove() {
@@ -287,7 +262,6 @@
 
 	/**
 	 * Cancel the current premove, if any.
-	 * 
 	 * @returns {void}
 	 */
 	export function cancelPremove() {
@@ -296,7 +270,6 @@
 
 	/**
 	 * Play the current predrop, if any.
-	 *
 	 * @param {(drop: import('chessground/types').Drop) => boolean } validate - Predicate to decide whether a drop is valid.
 	 * @returns {boolean} - True if a predrop was played.
 	 */
@@ -306,7 +279,6 @@
 	
 	/**
 	 * Cancel the current predrop, if any.
-	 * 
 	 * @returns {void}
 	 */
 	export function cancelPredrop() {
@@ -315,7 +287,6 @@
 
 	/**
 	 * Cancel the current move being made.
-	 *
 	 * @returns {void}
 	 */
 	export function cancelMove() {
@@ -324,7 +295,6 @@
 
 	/**
 	 * Cancel the current move and prevent further ones.
-	 * 
 	 * @returns {void}
 	 */
 	export function stop() {
@@ -333,7 +303,6 @@
 
 	/**
 	 * Make squares explode (for atomic chess).
-	 * 
 	 * @param {import('chessground/types').Key[] } keys - Squares to explode.
 	 * @returns {void}
 	 */
@@ -343,7 +312,6 @@
 
 	/**
 	 * Programmatically draw user shapes.
-	 *
 	 * @param {import('chessground/draw').DrawShape[] } shapes - Shapes to draw.
 	 * @returns {void}
 	 */
@@ -353,7 +321,6 @@
 
 	/**
 	 * Programmatically draw auto shapes.
-	 * 
 	 * @param {import('chessground/draw').DrawShape[] } shapes - Shapes to draw.
 	 * @returns {void}
 	 */
@@ -363,7 +330,6 @@
 
 	/** 
 	 * Redraw. Useful when CSS changes the board width or height.
-	 *
 	 * @returns {void}
 	 */
 	export function redrawAll() {
@@ -372,7 +338,6 @@
 
 	/**
 	 * Drag new piece, for crazyhouse and board editors.
-	 *
 	 * @param {import('chessground/types').Piece } piece - Piece to drop
 	 * @param {import('chessground/types').MouchEvent } event - The mouse/touch event identifying a target.
 	 * @param {boolean} [force] - True if the new piece can replace an existing one.
