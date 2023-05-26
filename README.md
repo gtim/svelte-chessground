@@ -9,6 +9,10 @@ Take a look at the [live demos](https://gtim.github.io/svelte-chessground-exampl
 
 ## Usage
 
+Install:
+
+    npm install svelte-chessground
+
 Display a chessboard where any pieces can be moved:
 
     <script>
@@ -37,10 +41,6 @@ You can find more examples in the [svelte-chessground-examples](https://github.c
 * [custom CSS](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/style))
 
 Chessground contains no chess logic, and as such can be used for chess variations. Examples that require chess logic import [chess.js](https://github.com/jhlywa/chess.js).
-
-### Installation
-
-    npm install svelte-chessground
     
 ### Styling
 
@@ -65,3 +65,11 @@ Chessground can be completely restyled through CSS. The component imports defaul
         <Chessground className="my-chessboard" />
 
 You can find working code for both approaches in the [custom styles examples](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte).
+
+## Building the package
+
+If you'd like to build the package yourself, clone this repository.
+
+    $ git clone https://github.com/gtim/svelte-chessground.git
+    $ cd svelte-chessground
+    $ npm run build
