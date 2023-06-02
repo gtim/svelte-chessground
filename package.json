@@ -7,7 +7,7 @@
 		"chessground",
 		"chessboard"
 	],
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"license": "GPL-3.0",
 	"homepage": "https://github.com/gtim/svelte-chessground#readme",
 	"bugs": "https://github.com/gtim/svelte-chessground/issues",
@@ -37,7 +37,7 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.15.1",
 		"@sveltejs/package": "^2.0.0",
-		"eslint-plugin-jsdoc": "^44.0.0",
+		"eslint-plugin-jsdoc": "^46.0.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"publint": "^0.1.9",
 		"svelte": "^3.54.0",
@@ -50,6 +50,6 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"chessground": "^8.3.7"
+		"chessground": "^8.3.9"
 	}
 }
