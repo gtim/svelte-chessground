@@ -46,14 +46,14 @@ Chessground contains no chess logic, and as such can be used for chess variation
 
 Chessground can be completely restyled through CSS. The component imports default stylesheets. To apply your own, you have two options:
 
-1. Override specific CSS commands with a scoped `:global`:
+1. Override specific CSS commands with a scoped `:global` and `!important`:
 
         <div class="override_background">
             <Chessground />
         </div>
         <style>
             div.override_background :global(.cg-wrap cg-board) {
-                background-image:url("/my-board.jpg"); /* replace chessboard image */
+                background-image:url("/my-board.jpg") !important; /* replace chessboard image */
             }
         </style>
 
@@ -68,7 +68,7 @@ You can find working code for both approaches in the [custom styles examples](ht
 
 ## Building the package
 
-If you'd like to build the package yourself, clone this repository.
+To build the package yourself:
 
     $ git clone https://github.com/gtim/svelte-chessground.git
     $ cd svelte-chessground
