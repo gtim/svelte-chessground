@@ -1,8 +1,6 @@
 <script>
 	import { Chessground } from 'chessground';
 
-	import './assets/chessground.base.css';
-
 	import { onMount } from 'svelte';
 
 
@@ -367,6 +365,187 @@
 	 * correct me if I'm wrong), the default Chessground styles are
 	 * included here.
 	 */
+
+	/*
+	 * chessground.base.css 
+	 */
+
+
+	.cg-default-style.cg-wrap {
+	  box-sizing: content-box;
+	  position: relative;
+	  display: block;
+	}
+
+	.cg-default-style :global(cg-container) {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  display: block;
+	  top: 0;
+	}
+
+	.cg-default-style :global(cg-board) {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  line-height: 0;
+	  background-size: cover;
+	}
+
+	.cg-default-style.cg-wrap.manipulable :global(cg-board) {
+	  cursor: pointer;
+	}
+
+	.cg-default-style :global(cg-board square) {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 12.5%;
+	  height: 12.5%;
+	  pointer-events: none;
+	}
+
+	.cg-default-style :global(cg-board square.move-dest) {
+	  pointer-events: auto;
+	}
+
+	.cg-default-style :global(cg-board square.last-move) {
+	  will-change: transform;
+	}
+
+	.cg-default-style.cg-wrap :global(piece) {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 12.5%;
+	  height: 12.5%;
+	  background-size: cover;
+	  z-index: 2;
+	  will-change: transform;
+	  pointer-events: none;
+	}
+
+	.cg-default-style :global(cg-board piece.dragging) {
+	  cursor: move;
+	  /* !important to override z-index from 3D piece inline style */
+	  z-index: 11 !important;
+	}
+
+	.cg-default-style :global(piece.anim) {
+	  z-index: 8;
+	}
+
+	.cg-default-style :global(piece.fading) {
+	  z-index: 1;
+	  opacity: 0.5;
+	}
+
+	.cg-default-style.cg-wrap :global(piece.ghost) {
+	  opacity: 0.3;
+	}
+
+	.cg-default-style.cg-wrap :global(piece svg) {
+	  overflow: hidden;
+	  position: relative;
+	  top: 0px;
+	  left: 0px;
+	  width: 100%;
+	  height: 100%;
+	  pointer-events: none;
+	  z-index: 2;
+	  opacity: 0.6;
+	}
+
+	.cg-default-style.cg-wrap :global(cg-auto-pieces),
+	.cg-default-style.cg-wrap :global(.cg-shapes),
+	.cg-default-style.cg-wrap :global(.cg-custom-svgs) {
+	  overflow: visible;
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  width: 100%;
+	  height: 100%;
+	  pointer-events: none;
+	}
+
+	.cg-default-style.cg-wrap :global(cg-auto-pieces) {
+	  z-index: 2;
+	}
+
+	.cg-default-style.cg-wrap :global(cg-auto-pieces piece) {
+	  opacity: 0.3;
+	}
+
+	.cg-default-style.cg-wrap :global(.cg-shapes) {
+	  overflow: hidden;
+	  opacity: 0.6;
+	  z-index: 2;
+	}
+
+	.cg-default-style.cg-wrap :global(.cg-custom-svgs) {
+	  /* over piece.anim = 8, but under piece.dragging = 11 */
+	  z-index: 9;
+	}
+
+	.cg-default-style.cg-wrap :global(.cg-custom-svgs svg) {
+	  overflow: visible;
+	}
+
+	.cg-default-style.cg-wrap :global(coords) {
+	  position: absolute;
+	  display: flex;
+	  pointer-events: none;
+	  opacity: 0.8;
+	  font-family: sans-serif;
+	  font-size: 9px;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.ranks) {
+	  left: 4px;
+	  top: -20px;
+	  flex-flow: column-reverse;
+	  height: 100%;
+	  width: 12px;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.ranks.black) {
+	  flex-flow: column;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.ranks.left) {
+	  left: -15px;
+	  align-items: flex-end;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.files) {
+	  bottom: -4px;
+	  left: 24px;
+	  flex-flow: row;
+	  width: 100%;
+	  height: 16px;
+	  text-transform: uppercase;
+	  text-align: center;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.files.black) {
+	  flex-flow: row-reverse;
+	}
+
+	.cg-default-style.cg-wrap :global(coords coord) {
+	  flex: 1 1 auto;
+	}
+
+	.cg-default-style.cg-wrap :global(coords.ranks coord) {
+	  transform: translateY(39%);
+	}
+
 
 	/*
 	 * chessground.cbrown.css - board appearence
