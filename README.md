@@ -7,6 +7,8 @@ Svelte-chessground is a wrapper around the full-featured [Chessground](https://g
 
 Take a look at the [live demos](https://gtim.github.io/svelte-chessground-examples/watch-ai).
 
+Note: Chessground does not contain chess logic. If you want a chessboard with legal moves and pawn promotion without additional code, you're looking for [svelte-chess](https://github.com/gtim/svelte-chess).
+
 ## Usage
 
 Install:
