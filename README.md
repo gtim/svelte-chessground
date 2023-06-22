@@ -59,7 +59,7 @@ Chessground can be completely restyled through CSS. The component imports defaul
             }
         </style>
 
-2. Apply your own full chessground stylesheet instead of the defaults by setting the `className` prop and importing your own stylesheet.
+2. Apply your own full chessground stylesheet instead of the defaults by setting the `class` prop and importing your own stylesheet.
 By changing the class name from the default, none of the default stylesheets will apply, not even the piece SVGs.
 Additionally, you can use the provided `ChessgroundUnstyled` component, which is completely unstyled.
 
@@ -67,7 +67,7 @@ Additionally, you can use the provided `ChessgroundUnstyled` component, which is
             import {ChessgroundUnstyled} from 'svelte-chessground';
             import '$lib/my-chessboard.css';
         </script>
-        <ChessgroundUnstyled className="my-chessboard" />
+        <ChessgroundUnstyled class="my-chessboard" />
 
 You can find working code for both approaches in the [custom styles examples](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte).
 

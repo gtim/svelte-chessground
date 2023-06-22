@@ -23,7 +23,8 @@
 	 * stylesheet than the default.
 	 * @type {string}
 	 */
-	export let className = 'cg-default-style';
+	let className = 'cg-default-style';
+	export { className as class };
 
 	/** 
 	 * Chess position in Forsyth-Edwards notation.
