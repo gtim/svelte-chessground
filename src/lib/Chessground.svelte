@@ -354,19 +354,19 @@
 <div class="cg-wrap {className}" bind:this={container}></div>
 
 <style>
-	.cg-wrap {
-		width:100%;
-		aspect-ratio:1;
 
-		/* Add fallback for old browsers */
-		@supports not (aspect-ratio: 1) {
-		    .cg-wrap {
-		      padding-top: 100%;
-		    }
-		}
-	}
+ .cg-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+  }
 
-	/*
+  @supports not (aspect-ratio: 1) {
+    .cg-wrap {
+      padding-top: 100%;
+    }
+  }
+
+  /*
 	 * Board styling.
 	 *
 	 * As there is no bundler-agnostic way of including CSS files (please
