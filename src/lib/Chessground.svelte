@@ -357,6 +357,13 @@
 	.cg-wrap {
 		width:100%;
 		aspect-ratio:1;
+
+		/* Add fallback for old browsers */
+		@supports not (aspect-ratio: 1) {
+		    .cg-wrap {
+		      padding-top: 100%;
+		    }
+		}
 	}
 
 	/*
