@@ -34,8 +34,8 @@
 		"svelte": "^3.54.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.15.1",
+		"@sveltejs/adapter-auto": "^3.1.1",
+		"@sveltejs/kit": "^2.5.0",
 		"@sveltejs/package": "^2.0.0",
 		"eslint-plugin-jsdoc": "^46.0.0",
 		"eslint-plugin-svelte3": "^4.0.0",
